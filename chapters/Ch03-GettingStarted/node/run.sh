@@ -1,0 +1,1 @@
+node helloWorld.js "postgres://guy:***REMOVED***@free-tier6.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=$HOME/CRDBKeys/cc-ca.crt&options=--cluster%3Dgrumpy-orca-56"

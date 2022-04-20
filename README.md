@@ -2,7 +2,7 @@
 
 This repo contains the sample code for the OReilly book [CockroachDB The Definitive Guide](https://www.oreilly.com/library/view/cockroachdb-the-definitive/9781098100230/.
 
-## Caveats and boring disclaimers
+## Caveats and tedious disclaimers
 
 The code in this repository is offered in the public domain with No Strings Attached.  You are free to use the code without attribution in any manner whatsoever. 
 
@@ -16,9 +16,7 @@ A lot of the code was written by [Guy Harrison](mailto:guy.a.harrison@gmail.com)
 
 ## Structure
 
-There are two top-level entry points in the repository
+There are two top-level entry points in the repository.
 
 * [Chapters](chapters) contains entries specific to chapters.  By and large, it will contain exact copies of fragments from each chapter
-* [Languages](languages) contain language-specific examples that might, in some cases, span chapters.  
-
-
+* [Languages](languages) contain language-specific examples that might, in some cases, span chapters.

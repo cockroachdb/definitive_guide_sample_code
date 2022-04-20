@@ -1,6 +1,6 @@
 # Sample code for CockroachDB The Definitive Guide
 
-This repo contains the sample code for the OReilly book [CockroachDB The Definitive Guide](https://www.oreilly.com/library/view/cockroachdb-the-definitive/9781098100230/.
+This repo contains the sample code for the OReilly book [CockroachDB The Definitive Guide](https://www.oreilly.com/library/view/cockroachdb-the-definitive/9781098100230/).
 
 ## Caveats and tedious disclaimers
 

@@ -1,0 +1,5 @@
+SET CLUSTER SETTING kv.rangefeed.enabled = true;
+CREATE TABLE foo (a INT PRIMARY KEY);
+INSERT INTO foo VALUES (0);
+EXPERIMENTAL CHANGEFEED FOR foo
+    WITH resolved = '10s';

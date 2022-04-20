@@ -1,0 +1,1 @@
+python helloCRDB.py 'postgres://guy:b4_jPoEYw4_Ixsj7@free-tier6.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=/Users/guyharrison/CRDBKeys/cc-ca.crt&options=--cluster%3dgrumpy-orca-56'

@@ -1,0 +1,66 @@
+services:
+
+  ###################
+  # Primary cluster #
+  ###################
+
+  primary_1:
+    image: cockroachdb/cockroach:v24.2.0
+    hostname: primary_1
+    container_name: primary_1
+    command: start --insecure --join=primary_1,primary_2,primary_3
+    ports:
+      - 26001:26257
+    networks:
+      - crdb
+
+  primary_2:
+    image: cockroachdb/cockroach:v24.2.0
+    hostname: primary_2
+    container_name: primary_2
+    command: start --insecure --join=primary_1,primary_2,primary_3
+    networks:
+      - crdb
+
+  primary_3:
+    image: cockroachdb/cockroach:v24.2.0
+    hostname: primary_3
+    container_name: primary_3
+    command: start --insecure --join=primary_1,primary_2,primary_3
+    networks:
+      - crdb
+  
+  ###################
+  # Standby cluster #
+  ###################
+
+  standby_1:
+    image: cockroachdb/cockroach:v24.2.0
+    hostname: standby_1
+    container_name: standby_1
+    command: start --insecure --join=standby_1,standby_2,standby_3
+    ports:
+      - 26002:26257
+    networks:
+      - crdb
+
+  standby_2:
+    image: cockroachdb/cockroach:v24.2.0
+    hostname: standby_2
+    container_name: standby_2
+    command: start --insecure --join=standby_1,standby_2,standby_3
+    networks:
+      - crdb
+
+  standby_3:
+    image: cockroachdb/cockroach:v24.2.0
+    hostname: standby_3
+    container_name: standby_3
+    command: start --insecure --join=standby_1,standby_2,standby_3
+    networks:
+      - crdb
+
+
+networks:
+  crdb:
+    driver: bridge
